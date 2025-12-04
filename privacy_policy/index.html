@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workprint Studios – StudioRoster Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global_styles.css">
+</head>
+<body>
+    <div id="global-header"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-header').innerHTML = data;
+
+                // Initialize dropdowns AFTER the header is inserted
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    const btn = dropdown.querySelector('.dropbtn');
+                    const content = dropdown.querySelector('.dropdown-content');
+
+                    if (!btn || !content) return;
+
+                    // Toggle dropdown on click
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent window click from firing
+                        content.classList.toggle('show');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                window.addEventListener('click', () => {
+                    document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                        dc.classList.remove('show');
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+
+    <h1> Privacy Policy</h1>
+    <p class="small">Effective Date: <strong>November 19, 2025</strong> — App Package: <code>com.workprintstudios.studioroster</code></p>
+    <section>
+        <p>
+            Workprint Studios (“Company,” “we,” “us,” or “our”) respects your privacy and is committed to protecting your personal information.
+            By downloading, installing, accessing, or using the StudioRoster app (“App”), you acknowledge that you have read, understood, and
+            agree to the terms of this Privacy Policy and consent to the collection, use, disclosure, and retention of your information as
+            described herein.
+        </p>
+    </section>
+    <p><strong>If you do not agree with these terms, do not use the App.</strong></p>
+
+    <hr>
+    <section>
+        <h2> Eligibility</h2>
+        <p>You must be at least 18 years of age to access or use StudioRoster in any form, including the mobile application, website, or any related services. By creating an account or using the service, you represent and warrant that you meet this age requirement and that all information you provide is complete, accurate, and truthful. You acknowledge that providing false information or misrepresenting your age may result in the termination of your account and access to StudioRoster.</p>
+    </section>
+    <section>
+        <h2>1. Information We Collect</h2>
+        <p>We collect the following categories of information directly from you when you use StudioRoster:</p>
+
+        <h3>A. Personal Identifiable Information (PII)</h3>
+        <ul>
+            <li>First and last name</li>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>Home or mailing address</li>
+            <li>Birth Date</li>
+            <li>Company or business name</li>
+            <li>Account username and password</li>
+            <li>Any other information you voluntarily provide within the App</li>
+        </ul>
+
+        <h3>B. Automatically Collected Information</h3>
+        <ul>
+            <li>Device information (model, OS version, device ID)</li>
+            <li>IP address and approximate location</li>
+            <li>App activity logs and actions taken within the App</li>
+            <li>Usage statistics and crash logs</li>
+            <li>Cookies, identifiers, authentication tokens</li>
+        </ul>
+
+        <h3>C. For Security & Identity Verification</h3>
+        <ul>
+            <li>Login records</li>
+            <li>Session tokens</li>
+            <li>Fraud-prevention identifiers</li>
+            <li>Access timestamps</li>
+        </ul>
+
+        <h3>D. Communications & Content</h3>
+        <ul>
+            <li>Messages you send within the app (where applicable)</li>
+            <li>Support requests</li>
+            <li>Project, roster, and profile information you upload</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. How We Use Your Information</h2>
+
+        <h3>A. Core Functionality</h3>
+        <ul>
+            <li>Creating and managing your user account</li>
+            <li>Providing access to App features</li>
+            <li>Syncing, saving, and retrieving your app data</li>
+        </ul>
+
+        <h3>B. Security, Fraud Prevention, and Compliance</h3>
+        <ul>
+            <li>Identity verification</li>
+            <li>Monitoring suspicious or malicious activity</li>
+            <li>Enforcing our Terms of Service</li>
+            <li>Complying with applicable laws and regulations</li>
+        </ul>
+
+        <h3>C. Advertising, Marketing & Analytics</h3>
+        <p>We retain the right to use your information for:</p>
+        <ul>
+            <li>In-app promotions</li>
+            <li>Personalized advertising</li>
+            <li>Audience analytics</li>
+            <li>Internal marketing strategies</li>
+            <li>Cross-promotion of Workprint Studios products</li>
+        </ul>
+        <p>We may use aggregated or anonymized data for any lawful purpose.</p>
+
+        <h3>D. Communication</h3>
+        <ul>
+            <li>Sending account-related alerts</li>
+            <li>Verifying email or phone information</li>
+            <li>App updates, policy changes, or security notices</li>
+            <li>Customer support</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. How We Share Your Information</h2>
+
+        <h3>A. Service Providers</h3>
+        <p>Trusted third-party providers that help run the App:</p>
+        <ul>
+            <li>Cloud hosting services</li>
+            <li>Authentication services</li>
+            <li>Payment processors (if applicable)</li>
+            <li>Analytics platforms</li>
+            <li>Marketing and advertising vendors</li>
+        </ul>
+        <p>These parties only receive the information necessary to perform their services.</p>
+
+        <h3>B. Legal & Compliance Requirements</h3>
+        <p>We may disclose information if required by:</p>
+        <ul>
+            <li>Court order or subpoena</li>
+            <li>Law enforcement request</li>
+            <li>To protect our legal rights or prevent harm</li>
+        </ul>
+
+        <h3>C. Business Transfers</h3>
+        <p>In the event of:</p>
+        <ul>
+            <li>Merger</li>
+            <li>Acquisition</li>
+            <li>Company restructuring</li>
+            <li>Asset sale</li>
+        </ul>
+        <p>Your information may be transferred as part of the transaction.</p>
+    </section>
+
+    <section>
+        <h2>4. Your Rights & Choices</h2>
+        <p>Depending on your jurisdiction (such as California, Colorado, Virginia, Connecticut, Utah, and others), you may have rights including:</p>
+        <ul>
+            <li>Right to access your information</li>
+            <li>Right to correct inaccurate data</li>
+            <li>Right to request deletion</li>
+            <li>Right to opt out of certain data uses (e.g., targeted advertising)</li>
+            <li>Right to data portability</li>
+        </ul>
+        <p>
+            To exercise these rights, contact us at:<br>
+            <strong>studiorosterapp@gmail.com</strong>
+        </p>
+        <p>We may require identity verification before processing requests.</p>
+    </section>
+
+    <section>
+        <h2>5. Data Storage & Retention</h2>
+        <p>We store your information as long as your account is active or as needed for legal, security, and business purposes.</p>
+        <p>We retain certain data even after account deletion for fraud prevention, compliance, and recordkeeping.</p>
+    </section>
+
+    <section>
+        <h2>6. Security</h2>
+        <p>We implement reasonable administrative, technical, and physical safeguards including:</p>
+        <ul>
+            <li>Encrypted communication channels</li>
+            <li>Secure password hashing</li>
+            <li>Access controls</li>
+            <li>Monitoring and logging</li>
+        </ul>
+        <p>No security system is perfect, and we cannot guarantee absolute protection.</p>
+    </section>
+
+    <section>
+        <h2>7. Children’s Privacy</h2>
+        <p>The App is not intended for users under 13 (or under the age applicable in your jurisdiction). We do not knowingly collect information from minors. If discovered, the data will be deleted promptly.</p>
+    </section>
+
+    <section>
+        <h2>8. International Users</h2>
+        <p>If you access the App from outside the United States, your information may be transferred to and stored in the U.S. or other jurisdictions. By using the App, you consent to such transfers.</p>
+    </section>
+
+    <section>
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>We reserve the right to modify, update, or replace this Privacy Policy at any time and without prior notice.</p>
+        <p>Changes are effective immediately upon posting inside the App or on our website.</p>
+        <p>By continuing to use the App, you agree to the updated Privacy Policy.</p>
+    </section>
+
+    <section>
+        <h2>10. Contact Information</h2>
+        <p>If you have questions about this Privacy Policy or your data rights, contact:</p>
+        <p>
+            <strong>Workprint Studios – Privacy Department</strong><br>
+            <strong>Email: contact@studioroster.com</strong> <br>
+            <strong>Website: <a href="https://www.studioroster.com">www.studioroster.com</a></strong>
+        </p>
+    </section>
+    <div id="global-footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
+
+</body>
+
+</html>

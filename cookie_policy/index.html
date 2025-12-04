@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workprint Studios – Cookie Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global_styles.css">
+</head>
+<body>
+    <div id="global-header"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-header').innerHTML = data;
+
+                // Initialize dropdowns AFTER the header is inserted
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    const btn = dropdown.querySelector('.dropbtn');
+                    const content = dropdown.querySelector('.dropdown-content');
+
+                    if (!btn || !content) return;
+
+                    // Toggle dropdown on click
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent window click from firing
+                        content.classList.toggle('show');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                window.addEventListener('click', () => {
+                    document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                        dc.classList.remove('show');
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+
+
+    <h1>Cookie Policy</h1>
+    <p class="small">Effective Date: <strong>November 19, 2025</strong> — App Package: <code>com.workprintstudios.studioroster</code></p>
+    <section>
+        <p>Workprint Studios (“Company,” “we,” “us,” or “our”) uses cookies and similar tracking technologies on our website and in our App to improve your experience, ensure security, and provide services efficiently. This Cookie Policy explains what cookies are, how we use them, and the choices you have regarding their use.</p>
+    </section>
+    <hr>
+    <section>
+        <h2> Eligibility</h2>
+        <p>You must be at least 18 years of age to access or use StudioRoster in any form, including the mobile application, website, or any related services. By creating an account or using the service, you represent and warrant that you meet this age requirement and that all information you provide is complete, accurate, and truthful. You acknowledge that providing false information or misrepresenting your age may result in the termination of your account and access to StudioRoster.</p>
+    </section>
+    <section>
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files stored on your device (computer, tablet, or mobile) when you visit a website or use an app. They help websites remember your actions and preferences over time. Cookies can be “session cookies” that expire when you close your browser, or “persistent cookies” that remain on your device for a set period.</p>
+    </section>
+
+    <section>
+        <h2>2. How We Use Cookies</h2>
+        <p>We use cookies to support the core functionality of our website and App, improve user experience, and for analytics and marketing purposes. Specifically, we use cookies for:</p>
+
+        <h3>A. Essential / Functional Cookies</h3>
+        <ul>
+            <li>Remembering login sessions so you stay signed in while navigating the site or app.</li>
+            <li>Maintaining preferences and settings, such as language or display options.</li>
+            <li>Enabling secure transactions and preventing fraudulent activity.</li>
+        </ul>
+
+        <h3>B. Analytics & Performance Cookies</h3>
+        <ul>
+            <li>Tracking usage patterns such as which pages are visited most frequently and how users navigate through the site.</li>
+            <li>Measuring performance of features and content to improve functionality.</li>
+            <li>Recording crash reports, errors, and load times to ensure smooth operation of the App and website.</li>
+        </ul>
+
+        <h3>C. Personalization Cookies</h3>
+        <ul>
+            <li>Remembering your user preferences to personalize the content displayed, such as recent projects, favorite sections, or suggested features.</li>
+            <li>Providing a more tailored experience by remembering your choices and interactions.</li>
+        </ul>
+
+        <h3>D. Security Cookies</h3>
+        <ul>
+            <li>Verifying your identity when logging in or performing sensitive actions.</li>
+            <li>Protecting against malicious activity, such as cross-site scripting or unauthorized access.</li>
+            <li>Ensuring the integrity of sessions and account security.</li>
+        </ul>
+
+        <h3>E. Marketing & Advertising Cookies</h3>
+        <ul>
+            <li>Delivering advertisements that are relevant to your interests.</li>
+            <li>Measuring the effectiveness of ad campaigns and promotions.</li>
+            <li>Tracking interactions with marketing content, emails, or sponsored content.</li>
+        </ul>
+
+        <h3>F. Third-Party Cookies</h3>
+        <p>We may use third-party services (such as analytics or ad providers) that place cookies on your device. These cookies are governed by the third party’s policies and are used to:</p>
+        <ul>
+            <li>Analyze traffic and app usage patterns.</li>
+            <li>Measure marketing campaign performance.</li>
+            <li>Provide targeted ads across websites and apps.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3. Your Choices</h2>
+        <p>You have the ability to control or disable cookies through your browser or device settings. Options include:</p>
+        <ul>
+            <li>Blocking all cookies.</li>
+            <li>Deleting existing cookies.</li>
+            <li>Receiving a notification when a new cookie is set.</li>
+        </ul>
+        <p>Note that disabling or deleting cookies may affect the functionality of the App or website and limit your access to some features.</p>
+    </section>
+
+    <section>
+        <h2>4. Retention & Data Protection</h2>
+        <p>Cookies are stored on your device according to their type and purpose. Essential cookies are typically session-based and expire quickly, while performance or marketing cookies may remain longer. We do not store personal information directly in cookies; they only store identifiers that allow the App or website to link activity to your account securely.</p>
+    </section>
+
+    <section>
+        <h2>5. Changes to This Cookie Policy</h2>
+        <p>We may update this Cookie Policy at any time to reflect changes in our practices, technologies, or legal obligations. Updates are effective immediately upon posting on our website or within the App. By continuing to use our services after changes are made, you accept the updated policy.</p>
+    </section>
+
+    <section>
+        <h2>6. Contact Information</h2>
+        <p>If you have questions about this Cookie Policy or the use of cookies in the App or website, please contact:</p>
+        <p>
+            <strong>Workprint Studios – Privacy Department</strong><br>
+            Email: <strong>contact@studioroster.com</strong> <br>
+            Website: <a href="https://www.studioroster.com">www.studioroster.com</a>
+        </p>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const btn = dropdown.querySelector('.dropbtn');
+            const content = dropdown.querySelector('.dropdown-content');
+
+            if (!btn || !content) return;
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent click from reaching window
+                content.classList.toggle('show');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                dc.classList.remove('show');
+            });
+        });
+    });
+</script>
+
+<style>
+    .dropdown-content {
+        display: none;
+    }
+
+        .dropdown-content.show {
+            display: block;
+        }
+</style>
+
+</html>

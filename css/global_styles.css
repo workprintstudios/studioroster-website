@@ -1,0 +1,158 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0b0e13;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   Parallax Background Layers
+=========================== */
+.parallax-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    opacity: 0.25;
+}
+
+#layer-stars {
+    background-image: url('./images/background.jpg');
+}
+
+#layer-grid {
+    background-image: url('');
+    opacity: 0.15;
+}
+
+/* ===========================
+   Sections
+=========================== */
+.section {
+    padding: 80px 50px;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+/* ===========================
+   Cards
+=========================== */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 4px;
+    margin: 40px 0;
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 50px rgba(0, 234, 255, 0.25);
+    }
+
+    .card h2 {
+        color: #00eaff;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+/* ===========================
+   Call-to-Action Buttons
+=========================== */
+.cta {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00eaff, #0072ff);
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 20px #00eaff;
+    transition: 0.3s;
+}
+
+    .cta:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px #00eaff;
+    }
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+    font-size: 0.9rem;
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.6;
+    color: #111;
+    padding: 24px;
+    max-width: 980px;
+    margin: 0 auto;
+    background: #f9fafb;
+}
+
+
+section {
+    background: #fff;
+    padding: 20px 22px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 18px rgba(12,18,30,0.04);
+}
+
+h2 {
+    margin-top: 0;
+    color: #0b1220;
+}
+
+.meta {
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+.small {
+    font-size: 13px;
+    color: #374151;
+}
+
+footer {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+code {
+    background: #eef2ff;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+}
+

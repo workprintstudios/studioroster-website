@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudioRoster – Manage Projects, Schedule Teams, Communicate Instantly</title>
+    <link rel="stylesheet" href="/css/global_styles.css">
+</head>
+<body>
+
+    <div id="layer-stars" class="parallax-layer"></div>
+    <div id="layer-grid" class="parallax-layer"></div>
+    <div id="global-header"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-header').innerHTML = data;
+
+                // Initialize dropdowns AFTER the header is inserted
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    const btn = dropdown.querySelector('.dropbtn');
+                    const content = dropdown.querySelector('.dropdown-content');
+
+                    if (!btn || !content) return;
+
+                    // Toggle dropdown on click
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent window click from firing
+                        content.classList.toggle('show');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                window.addEventListener('click', () => {
+                    document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                        dc.classList.remove('show');
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+    
+
+    <div class="section">
+        <div class="card">
+            <h2>📁 Organize Projects With Precision</h2>
+            <p>
+                Create, manage, and track detailed project information effortlessly. StudioRoster lets you centralize your entire workflow — from production data to personnel details — giving you total control and clarity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>🗓 Intelligent Scheduling</h2>
+            <p>
+                Build schedules, assign roles, and notify teams with ease. Our dynamic system ensures your crew always knows where they need to be and when — with real‑time updates that keep everyone aligned.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>💬 Real‑Time In‑App Communication</h2>
+            <p>
+                Say goodbye to scattered messages. StudioRoster includes a built‑in communication suite, allowing team members to connect instantly, share updates, and maintain a seamless flow of information.
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://play.google.com/store/apps/details?id=com.workprintstudios.studioroster" class="cta">Get Started</a>
+        </div>
+    </div>
+
+    <div id="global-footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
+
+    <script>
+        // Parallax depth movement
+        document.addEventListener("mousemove", (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 15;
+            const y = (e.clientY / window.innerHeight - 0.5) * 15;
+
+            document.getElementById("layer-stars").style.transform = `translate(${x}px, ${y}px)`;
+            document.getElementById("layer-grid").style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
+        });
+    </script>
+
+</body>
+
+</html>

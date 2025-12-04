@@ -1,0 +1,322 @@
+<html>
+<style>
+    body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        line-height: 1.6;
+        color: #111;
+        padding: 2px;
+        max-width: 980px;
+        margin: 0 auto;
+        background: #f9fafb;
+    }
+
+    .site-header {
+        background: #0f172a;
+        color: #fff;
+        padding: 0px 24px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border-radius: 0 0 3px 3px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+    }
+    .logo {
+         /* position relative to header */
+        top: 4%; /* distance from the top of header */
+        left: 2%; /* distance from the left of header */
+        max-height: 80px; /* constrain height */
+        width: auto; /* maintain aspect ratio */
+        z-index: 100; /* ensure it’s on top */
+        filter: invert(100%); /* invert colors */
+    }
+
+    
+    
+    .nav-bar {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        position: relative;
+    }
+
+    .nav-bar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 12px;
+        border-radius: 3px;
+        transition: background 0.2s;
+    }
+
+    .nav-bar a:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        right: 4%; 
+        top: 2%;
+    }
+
+    .nav-btn {
+        display: inline-block;
+        background: none;
+        color: #fff;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+        text-align: center;
+    }
+
+    .nav-btn:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    button.nav-btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+
+
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        border-radius: 3px;
+        overflow: hidden;
+        z-index: 1000;
+        right: 5px;
+    }
+
+    .dropdown-content a {
+        color: #0f172a;
+        padding: 10px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight: 400;
+        transition: background 0.2s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f5f9;
+    }
+
+    header {
+        text-align: center;
+        padding: 120px 30px;
+    }
+
+    .site-header h1 {
+        margin: 0 0 12px 0; /* space below title instead of <br> */
+        font-size: 32px;
+        color: #0b1220;
+    }
+
+    header h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        color: #0b1220; /* light grey */
+        text-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff, 0 0 40px #00eaff;
+        animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 15px #00eaff;
+        }
+
+        to {
+            text-shadow: 0 0 40px #00eaff;
+        }
+    }
+
+    header p {
+        font-size: 1.4rem;
+        opacity: 0.85;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    section {
+        background: #fff;
+        padding: 20px 22px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        box-shadow: 0 6px 18px rgba(12,18,30,0.04);
+    }
+
+    h2 {
+        margin-top: 0;
+        color: #0b1220;
+    }
+
+    .meta {
+        color: #374151;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    ol {
+        padding-left: 20px;
+    }
+
+    .small {
+        font-size: 13px;
+        color: #374151;
+    }
+
+    footer {
+        text-align: center;
+        color: #6b7280;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    code {
+        background: #eef2ff;
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    }
+    /* Mobile adjustments: screens up to 600px */
+    @media screen and (max-width: 600px) {
+
+        body {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .site-header {
+            
+            padding: 2px;
+            text-align: center;
+            display: flex;
+            width: 600px;
+        }
+
+        .logo {
+            max-height: 45px;
+            margin-bottom: 8px;
+        }
+
+        .nav-bar {
+            flex-direction: row;
+            left: 30px;
+            bottom: 3px;
+            gap: 8px;
+            width: 100%;
+        }
+
+            .nav-bar a, .nav-btn {
+                font-size: 14px;
+                padding: 6px 8px;
+            }
+
+        header {
+            padding: 80px 16px;
+        }
+
+        header h1 {
+            transform: scale(0.5);
+            transform-origin: top center; /* optional: control where it scales from */
+            font-weight: 700;
+            font-size: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #0b1220; /* light grey */
+            text-shadow: 0 0 15px #00eaff, 0 0 25px #00eaff, 0 0 40px #00eaff;
+            animation: glow 3s infinite alternate;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .dropdown-content {
+            min-width: 140px;
+            right: 0;
+        }
+    }
+
+
+</style>
+<header class="site-header">
+
+    <a href="/" class="logo-link">
+        <img src="/images/header_logo.png" alt="Studio Roster Logo" class="logo">
+    </a>
+    <p></p>
+
+    <h1>Studio Roster</h1>
+    <p></p>
+    <nav class="nav-bar">
+        <a href="/" class="nav-btn">Home</a>
+        <div class="dropdown">
+            <button class="nav-btn dropbtn">Policies &#x25BC;</button>
+            <div class="dropdown-content">
+                <a href="/privacy_policy">Privacy Policy</a>
+                <a href="/terms_of_use">Terms of Use</a>
+                <a href="/cookie_policy">Cookie Policy</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    /* Your existing CSS stays mostly the same, just add: */
+    .dropdown-content.show {
+        display: block;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const btn = dropdown.querySelector('.dropbtn');
+            const content = dropdown.querySelector('.dropdown-content');
+
+            if (!btn || !content) return;
+
+            // Toggle dropdown on click
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent window click from firing
+                content.classList.toggle('show');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                dc.classList.remove('show');
+            });
+        });
+    });
+</script>
+</html>

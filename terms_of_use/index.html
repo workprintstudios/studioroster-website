@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Workprint Studios — StudioRoster Terms of Service</title>
+    <link rel="stylesheet" href="/css/global_styles.css">
+</head>
+<body>
+    <div id="layer-stars" class="parallax-layer"></div>
+    <div id="layer-grid" class="parallax-layer"></div>
+    <div id="global-header"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-header').innerHTML = data;
+
+                // Initialize dropdowns AFTER the header is inserted
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    const btn = dropdown.querySelector('.dropbtn');
+                    const content = dropdown.querySelector('.dropdown-content');
+
+                    if (!btn || !content) return;
+
+                    // Toggle dropdown on click
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent window click from firing
+                        content.classList.toggle('show');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                window.addEventListener('click', () => {
+                    document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                        dc.classList.remove('show');
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+
+
+    <h1> Terms of Service</h1>
+    <p class="small">Effective Date: <strong>November 19, 2025</strong> — App Package: <code>com.workprintstudios.studioroster</code></p>
+
+    <section>
+        <h2>Introduction</h2>
+        <p class="meta">Please read these Terms of Service ("<strong>Terms</strong>") carefully before using the StudioRoster mobile application (the "<strong>App</strong>") operated by Workprint Studios ("<strong>we</strong>", "<strong>us</strong>", or "<strong>Company</strong>"). These Terms govern your access to and use of the App and any related services, features, or content provided by the Company.</p>
+        <p>By downloading, installing, registering for, or otherwise using the App you accept and agree to be bound by these Terms. If you do not agree to these Terms, do not access or use the App.</p>
+        <p class="small"><strong>Important:</strong> This document is intended to be broad and practical for app distribution and general compliance purposes, but it is not a substitute for legal advice. Consider consulting an attorney for jurisdiction-specific requirements.</p>
+    </section>
+
+    <section>
+        <h2> Eligibility</h2>
+        <p>You must be at least 18 years of age to access or use StudioRoster in any form, including the mobile application, website, or any related services. By creating an account or using the service, you represent and warrant that you meet this age requirement and that all information you provide is complete, accurate, and truthful. You acknowledge that providing false information or misrepresenting your age may result in the termination of your account and access to StudioRoster.</p>
+    </section>
+
+    <section>
+        <h2>2. Accounts, Registration & Security</h2>
+        <ol>
+            <li><strong>Account Information:</strong> To use certain features of the App you must register and provide personal information (e.g., name, email, phone, password). You agree to provide accurate, current, and complete information and to keep that information up-to-date.</li>
+            <li><strong>Credentials & Security:</strong> You are responsible for safeguarding your account credentials. You agree to notify us immediately of any unauthorized use of your account or any other security breach.</li>
+            <li><strong>Account Termination:</strong> We may suspend or terminate accounts that violate these Terms or when we reasonably suspect fraud, abuse, or illegal activity. You may also close your account via the App or by contacting us; account closure does not necessarily delete retained backups or logs for legal or security purposes.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. License & Use Restrictions</h2>
+        <ol>
+            <li><strong>License to Use App:</strong> Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on devices you own or control.</li>
+            <li><strong>Restrictions:</strong> You must not: copy/modify the App; reverse engineer it; circumvent protections; use it unlawfully; scrape data; or use automated access methods without permission.</li>
+            <li><strong>Third-Party Components:</strong> The App may include third-party tools subject to third-party licenses.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>4. Content & Intellectual Property</h2>
+        <ol>
+            <li><strong>Our IP:</strong> The App and all Company content are owned by or licensed to us. All rights reserved.</li>
+            <li><strong>Your Content:</strong> You retain ownership of content you upload or create ("<strong>User Content</strong>"). You grant us a worldwide, royalty-free, sublicensable, transferable, non-exclusive license to use that content as required to operate and improve the App.</li>
+            <li><strong>Permissions & Representations:</strong> You represent you have the needed rights to upload or share User Content.</li>
+            <li><strong>Removal:</strong> We may remove User Content that violates these Terms or legal requirements.</li>
+
+            <!-- NEW REQUIRED CLAUSE INSERTED HERE -->
+            <li>
+                <strong>Public Disclosure of Intellectual Property & User Responsibility:</strong>
+                When you create, upload, share, or publish a project, file, asset, media item, or any form of intellectual property within the App, you acknowledge and agree that you are <strong>voluntarily disclosing your intellectual property to others who may have access to that project</strong>, including collaborators, team members, or any party with whom you choose to share your content. You further acknowledge that:
+                <ul>
+                    <li>It is <strong>your sole responsibility</strong> to protect your intellectual property, trade secrets, confidential materials, and any proprietary work.</li>
+                    <li>The App and Workprint Studios are <strong>not responsible or liable</strong> for any unauthorized use, copying, distribution, sharing, modification, theft, or public exposure of your IP caused by your actions or the actions of individuals you choose to share content with.</li>
+                    <li>By sharing or storing content within the App, you agree that such disclosure is made <strong>willingly and at your own risk</strong>.</li>
+                    <li>You understand that the App does not provide legal IP protection or enforcement mechanisms and is not responsible for monitoring, restricting, or policing user-to-user sharing of content.</li>
+                </ul>
+            </li>
+            <!-- END OF NEW CLAUSE -->
+
+        </ol>
+    </section>
+
+    <section>
+        <h2>5. Payment Terms & Subscriptions</h2>
+    
+        <ol>
+            <li><strong>Current Availability:</strong> The App does not currently offer subscription features. All features currently available are free to use unless otherwise noted.</li>
+            <li><strong>Future Subscriptions & Paywalls:</strong> We reserve the right to introduce subscription features, paid upgrades, or place certain App features behind paywalls at any time, at our sole discretion.</li>
+              <li><strong>Fees:</strong> Paid features, subscriptions, or purchases are billed in advance and non-refundable except as required by law.</li>
+            <li><strong>Billing:</strong> Payments may be processed by third-party payment providers in accordance with their terms.</li>
+            <li><strong>Refunds:</strong> Refund terms, if applicable, will be stated in the App or on the relevant platform.</li>
+        </ol>
+    </section>
+        <h2>6. Prohibited Conduct</h2>
+        <ul>
+            <li>Using the App for illegal or harmful activity</li>
+            <li>Disrupting networks or servers</li>
+            <li>Uploading harmful code</li>
+            <li>Impersonation or fraudulent identity use</li>
+            <li>Unauthorized data collection</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Privacy</h2>
+        <p>Your use of the App is governed by our <strong>Privacy Policy</strong>. By using the App you agree to our data practices.</p>
+    </section>
+
+    <section>
+        <h2>8. Disclaimers & Warranties</h2>
+        <p>THE APP IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND. WE DISCLAIM ALL IMPLIED WARRANTIES TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p>
+    </section>
+
+    <section>
+        <h2>9. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES. TOTAL LIABILITY WILL NOT EXCEED $0.</p>
+    </section>
+
+    <section>
+        <h2>10. Indemnification</h2>
+        <p>You agree to indemnify Workprint Studios against claims related to your content, conduct, or violations of these Terms.</p>
+    </section>
+
+    <section>
+        <h2>11. Termination</h2>
+        <p>We may suspend or terminate access as needed. You may also delete your account. Certain obligations survive termination.</p>
+    </section>
+
+    <section>
+        <h2>12. Changes to These Terms</h2>
+        <p>We may update these Terms at any time. Continued use of the App signifies acceptance of updated Terms.</p>
+    </section>
+
+    <section>
+        <h2>13. Governing Law & Dispute Resolution</h2>
+        <ol>
+            <li><strong>Governing Law:</strong> These Terms are governed by the laws of the state where Workprint Studios is headquartered.</li>
+            <li><strong>Informal Resolution:</strong> Disputes should first be attempted to be resolved informally.</li>
+            <li><strong>Arbitration / Small Claims:</strong> If arbitration is enabled, small claims court remains available where applicable.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>14. Export Controls</h2>
+        <p>You must comply with all export control laws when using the App.</p>
+    </section>
+
+    <section>
+        <h2>15. Notices</h2>
+        <p>Notices will be delivered via the App or email. Contact us at <strong>privacy@workprintstudios.com</strong>.</p>
+    </section>
+
+    <section>
+        <h2>16. Miscellaneous</h2>
+        <ul>
+            <li>Entire Agreement</li>
+            <li>Severability</li>
+            <li>No Waiver</li>
+            <li>Assignment</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>17. Contact Information</h2>
+        <p>
+            <strong>Workprint Studios — Legal / Privacy</strong><br />
+            Email: <strong>contact@studioroster.com</strong><br />
+            App Package: <code>com.workprintstudios.studioroster</code>
+        </p>
+    </section>
+
+    <div id="global-footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropbtn.addEventListener('click', () => {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!dropbtn.contains(e.target)) {
+            dropdownContent.style.display = 'none';
+        }
+    });
+});
+</script>
+</html>
