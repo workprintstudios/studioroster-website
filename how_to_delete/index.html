@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion – StudioRoster</title>
+    <link rel="stylesheet" href="/css/global_styles.css">
+</head>
+<body>
+    <div id="global-header"></div>
+
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-header').innerHTML = data;
+
+                const dropdowns = document.querySelectorAll('.dropdown');
+
+                dropdowns.forEach(dropdown => {
+                    const btn = dropdown.querySelector('.dropbtn');
+                    const content = dropdown.querySelector('.dropdown-content');
+
+                    if (!btn || !content) return;
+
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // prevent window click from firing
+                        content.classList.toggle('show');
+                    });
+                });
+
+                window.addEventListener('click', () => {
+                    document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                        dc.classList.remove('show');
+                    });
+                });
+            })
+            .catch(err => console.error('Failed to load header:', err));
+    </script>
+
+    <div class="section">
+        <h1>Account Deletion - How to</h1>
+        <p>If you would like to permanently delete your StudioRoster account, please follow the steps below. This process will remove your personal data from our systems, except where retention is required by law or for analytics purposes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Steps to Delete Your Account</h2>
+        <ul>
+            <li>Open the StudioRoster app and navigate to <strong>Profile &gt; Settings &#9881; &gt; Delete Account &gt; Delete Account &gt; Delete My Account </strong>.</li>
+            <li>Confirm that you want to delete your account by entering the random generate string. Then enter the password you use to sign in to the app</li>
+            <li>Your account and all associated personal data will be scheduled for deletion.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data That Will Be Deleted</h2>
+        <ul>
+            <li>Profile information: display name, company name.</li>
+            <li>Encrypted sensitive information: first name, last name, address, email, phone number, date of birth.</li>
+            <li>Subscription or usage data linked to your account.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data That May Be Retained</h2>
+        <p class="note">Some data may be retained in anonymized or aggregated form for analytics and reporting purposes. Certain information may also be retained to comply with legal obligations, for a period of up to <strong>24 months</strong>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact for Assistance</h2>
+        <p>If you have questions or encounter issues with deleting your account, please contact our support team at <a href="mailto:support@studioroster.com">support@studioroster.com</a>.</p>
+    </div>
+    <div id="global-footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('global-footer').innerHTML = data;
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const btn = dropdown.querySelector('.dropbtn');
+            const content = dropdown.querySelector('.dropdown-content');
+
+            if (!btn || !content) return;
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent click from reaching window
+                content.classList.toggle('show');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        window.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-content.show').forEach(dc => {
+                dc.classList.remove('show');
+            });
+        });
+    });
+</script>
+</body>
+
+</html>
