@@ -26,7 +26,7 @@ body {
 }
 
 #layer-stars {
-    background-image: url('./images/background.jpg');
+    background-image: url('/images/background.jpg');
 }
 
 #layer-grid {
@@ -155,4 +155,5 @@ code {
     border-radius: 6px;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
 }
+
 
